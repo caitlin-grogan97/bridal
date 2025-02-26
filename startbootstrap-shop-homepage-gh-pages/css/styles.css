@@ -413,6 +413,15 @@ textarea {
   line-height: inherit;
 }
 
+.no-bullets, .no-bullets li {
+  list-style-type:none;
+
+}
+
+h2.fw-bolder {
+  margin-bottom: 0px; /* Adjust this value as needed */
+}
+
 button,
 select {
   text-transform: none;
