@@ -43,10 +43,9 @@
                                 <li><a class="dropdown-item" href="#!">Shoe Care</a></li>
                                 <li><a class="dropdown-item" href="#!">Gown Care</a></li>
                                 <li><a class="dropdown-item" href="dressguide.html">Ultimate Wedding Gown Guide</a></li>
-                                <li><a class="dropdown-item" href="lingerieguide.html">Ultimate Wedding Lingerie Guide</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">FAQ</a></li>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
@@ -58,29 +57,68 @@
                 </div>
             </div>
         </nav>
-        <!-- Header Banner -->
+        <!-- Product Header -->
         <header class="bg-dark">
-            <img src="assets/dressbanner.jpg" class="img-fluid w-100" alt="Bridal Shop Banner">
+            <img src="assets/crawl.jpg" class="img-fluid w-100" alt="Bridal Shop Banner">
         </header>
-        
-        <!-- Main Content Section -->
-        <section class="py-5 text-center">
+        <!-- Product Details Section -->
+        <!-- Bridal Gown Appointment Request Form -->
+        <section class="py-5">
             <div class="container">
-                <h1 class="fw-bolder">Welcome to Caitlin's Bridal</h1>
-                <h3 class="fw-bolder">Your Dream Wedding Starts Here</h3>
-                <p class="lead">
-
-                    At <strong>Caitlin’s Bridal</strong>, we believe that every bride deserves a truly <strong>extraordinary experience</strong> when searching for her dream wedding gown. As a luxury bridal salon located in the heart of <strong>Halifax, Nova Scotia</strong>, we offer an exclusive selection of <strong>designer wedding dresses, couture gowns, and bespoke bridal accessories</strong> to ensure you look and feel absolutely breathtaking on your special day.  
+                <h2 class="text-center fw-bolder">Bridal Gown Appointment Request</h2>
+                <p class="text-center">Please fill out the form below to request an appointment.</p>
+                <form action="submit_form.php" method="post">
+                    <!-- Bride’s Name -->
+                    <div class="mb-3">
+                        <label for="brideName" class="form-label">Bride’s Name</label>
+                        <input type="text" class="form-control" id="brideName" name="brideName" required>
+                    </div>
+                    <!-- Bride’s Phone Number -->
+                    <div class="mb-3">
+                        <label for="bridePhone" class="form-label">Bride’s Phone Number</label>
+                        <input type="text" class="form-control" id="bridePhone" name="bridePhone" required>
+                    </div>
                     
-                    From the moment you step into our elegantly curated salon, you’ll be welcomed by our dedicated bridal stylists, who are here to provide a <strong>personalised, stress-free, and unforgettable</strong> shopping experience. Whether you envision a timeless and classic gown, a modern and sleek silhouette, or a fairytale-inspired masterpiece, we are committed to helping you find the perfect dress that reflects your unique style and love story.  
+                    <!-- Wedding Date -->
+                    <div class="mb-3">
+                        <label for="weddingDate" class="form-label">Wedding Date</label>
+                        <input type="date" class="form-control" id="weddingDate" name="weddingDate" required>
+                    </div>
                     
-                    At <strong>Caitlin's Bridal</strong>, it’s more than just finding a dress—it’s about celebrating <strong><b>you</b></strong> and creating cherished memories that last a lifetime. Let us be part of your bridal journey and make your wedding dreams a reality.  
+                    <!-- Number of Guests -->
+                    <div class="mb-3">
+                        <label for="guestCount" class="form-label">How Many Guests do you plan on Bringing?</label>
+                        <input type="number" class="form-control" id="guestCount" name="guestCount" min="0" required>
+                    </div>
                     
-                    ✨ <strong>Book your private bridal appointment today and step into luxury.</strong> ✨</p>
-                <a class="btn btn-primary btn-lg" href="products.html">Shop Now</a>
+                    <!-- Budget -->
+                    <div class="mb-3">
+                        <label for="budget" class="form-label">How much would you like to spend on your gown?</label>
+                        <select class="form-select" id="budget" name="budget" required>
+                            <option value="" disabled selected>Select your budget range</option>
+                            <option value="Under $1,000">Under $3,500</option>
+                            <option value="$1,000 - $2,500">$3,500 - $7,500</option>
+                            <option value="$2,500 - $5,000">$7,500 - $10,000</option>
+                            <option value="Over $5,000">Over $10,000</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Special Requests -->
+                    <div class="mb-3">
+                        <label for="specialRequests" class="form-label">Do you or anyone in your group need accommodations or have any special requests?</label>
+                        <textarea class="form-control" id="specialRequests" name="specialRequests" rows="3"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Request Appointment</button>
+                    </div>
+                </form>
             </div>
         </section>
-        
+
+                    
+         
         <!-- Footer -->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Caitlin's Bridal 2023</p></div>
